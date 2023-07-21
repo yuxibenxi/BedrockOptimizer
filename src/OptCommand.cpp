@@ -24,9 +24,11 @@ namespace trapdoor {
         auto command = DynamicCommand::createCommand("opt", "opt options",
                                                      static_cast<CommandPermissionLevel>(level));
 
+        /*
         auto &redstoneEnum = command->setEnum("redstone", {"compremove"});
         command->mandatory("opt", ParamType::Enum, redstoneEnum,
                            CommandParameterOption::EnumAutocompleteExpansion);
+        */
 
         auto &actorEnum = command->setEnum("actor", {"actorpush"});
         command->mandatory("opt", ParamType::Enum, actorEnum,
@@ -43,7 +45,7 @@ namespace trapdoor {
                            CommandParameterOption::EnumAutocompleteExpansion);
 
         command->optional("onoroff", ParamType::Bool);
-        command->addOverload({redstoneEnum, "onoroff"});
+        //command->addOverload({redstoneEnum, "onoroff"});
         command->addOverload({actorEnum, "onoroff"});
         //command->addOverload({hopperEnum, "onoroff"});
         command->addOverload({randomTickEnum, "onoroff"});
