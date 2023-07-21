@@ -51,7 +51,7 @@ namespace {
 
     bool tryPullInItemsFromWorld(Hopper *hopper, BlockSource &bs, Container &cont,
                                  const Vec3 &vec) {
-        auto *itemActor = hopper->_getItemAt(bs, vec + Vec3(0.0f, 0.625f, 0.0f));
+        auto *itemActor = hopper->_getContainerInBlock(bs, vec + Vec3(0.0f, 0.625f, 0.0f));
         return itemActor && hopper->_addItem(cont, *itemActor);
     }
 
