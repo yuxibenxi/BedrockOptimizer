@@ -39,7 +39,7 @@ file(
 
         src/remotery/Remotery.c
         src/opts/RandomTickOpt.cpp
-        src/opts/HopperOpt.cpp
+        #src/opts/HopperOpt.cpp
         src/opts/ActorOpt.cpp
         src/opts/RedstoneOpt.cpp
         src/opts/EntitySystemOpt.cpp

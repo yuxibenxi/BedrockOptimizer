@@ -20,8 +20,7 @@ namespace trapdoor {
 {
   "random-tick": true,
   "actor-push": true,
-  "component-remove": true,
-  "hopper": false
+  "component-remove": true
 }
 )";
                 std::ofstream f("./plugins/beopt/config.json");
@@ -56,7 +55,7 @@ namespace trapdoor {
             i >> config;
             this->randomTick = config["random-tick"].get<bool>();
             this->actorPush = config["actor-push"].get<bool>();
-            this->hopper = config["hopper"].get<bool>();
+            //this->hopper = config["hopper"].get<bool>();
             this->componentRemove = config["component-remove"].get<bool>();
 
             trapdoor::logger().info("Read getConfig file {} successfully", path);
@@ -73,6 +72,6 @@ namespace trapdoor {
         trapdoor::logger().info("[Random tick]: {}", this->randomTick);
         trapdoor::logger().info("[Actor push]: {}", this->actorPush);
         trapdoor::logger().info("[Component Remove]: {}", this->componentRemove);
-        trapdoor::logger().info("[Hopper]: {}", this->hopper);
+        //trapdoor::logger().info("[Hopper]: {}", this->hopper);
     }
 }  // namespace trapdoor

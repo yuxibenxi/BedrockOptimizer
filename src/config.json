@@ -1,6 +1,5 @@
 {
   "random-tick": true,
   "actor-push": true,
-  "component-remove": true,
-  "hopper": false
+  "component-remove": true
 }
